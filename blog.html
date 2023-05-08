@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q N A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <section class="mt-12">
+        <div>
+            <h3 class="text-3xl font-medium text-violet-700 mb-8">1.What is DOM? What is the purpose of DOM?</h3>
+            <p class="font-normal text-2xl text-violet-700">Answer: Dom or document object model is logical structure of how elements are designed in html. The purpose behind dom is maintain a standard for setting and manipulating tags in html also for handling events of any website.</p>
+            <h3 class="text-3xl font-medium text-violet-700 mb-8 mt-4">2.How can you select element from dom?</h3>
+            <ul class="font-normal text-2xl text-violet-700 ">
+                <li>document.getElementsByTagName('tag-name') ==> returns the tag(ex: div, h1, li, p) you put in the paranthesis Also returns HTMLCollection which is a array like object but not an array.</li>
+                <li>document.getElementsByClassName('class-name') ==> returns the tags who share the same class name inside html tags. unlike previouse selection technique it also returns HTMLCollection which is a array like object but not an array.</li>
+                <li>document.getElementById('id-name') ==> returns only the tag which have the exact tag which is put inside the paranthesis. It only returns one element as we always give unique id name in html tags. </li>
+                <li>document.querySelector('specific-tag') ==> returns only the tag you specified (eg: like for classname you need give .classname in the paranthesis). </li>
+                <li>document.querySelectorAll('tag-name') ==> returns the tag(ex: div, h1, li, p) you put in the paranthesis Also returns HTMLCollection which is a array like object but not an array.</li>
+            </ul>
+            <h3 class="text-3xl font-medium text-violet-700 mb-8 mt-4">3.What is event bubble?</h3>
+            <p class="font-normal text-2xl text-violet-700">Answer: In some nested elements When we need to get the topmost tag or parent tag by selecting the lowest tag or child tag but both have registered listener for event handling that's when we use event bubbling. For example say a section have a ul tag which have  few li inside that when we click on li it then select li then ul then section.  </p>
+            <h3 class="text-3xl font-medium text-violet-700 mb-8 mt-4">4. What is callback function? what is the use of callback function?</h3>
+            <p class="font-normal text-2xl text-violet-700">Answer: Calback functions are those functions which are function called from a outsider function. The major advantage of using callback functions is it's reusability. </p>
+        </div>
+    </section>
+    
+    <script src="js/shapes.js"></script>
+</body>
+</html>

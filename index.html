@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- navigation section and redirection button section  -->
+    <header class="mx-5  mt-8 bg-cyan-100 rounded-lg">
+        <nav class="flex justify-between">
+            <h1 class="font-medium mx-8 p-8 text-gray-400"> <span class="font-medium text-2xl text-black">Interactive</span> <br> Geometry Genius </h1>
+            <button class="bg-sky-400 px-8 py-2 my-8 mx-8 text-white font-medium rounded-lg hover:bg-sky-200" id="btn-blog" >Blog</button>
+
+        </nav>
+        
+
+    </header>
+    <main>
+        <!-- elements calculation section  -->
+        <section class="mt-12">
+            <div class="grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2">
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center" id="common-div1" onmouseenter="randomColorGenerator()">
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/triangle.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Triangle</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) = 0. 5 X <span id="tri-base">b</span> X <span id="tri-height">h</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="b" id="tri-base-input"> <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="h " id="tri-height-input"> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400" id="btn-tricalculate">Calculate</button>
+                   
+                </div>
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center">
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/rectangle.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Rectangle</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) =  <span id="rec-width">w</span> X <span id="rec-length">l</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="b" id="rec-width-input"> <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="h " id="rec-length-input"> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400" id="btn-reccalculate">Calculate</button>
+                   
+                </div>
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center"  >
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/parallelogram.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Parallelogram</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) =  <span>b</span> X <span>h</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="b" > <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="h "> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400">Calculate</button>
+                   
+                </div>
+                <div class=" rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center">
+                  
+                   
+                    <h2 class="text-center font-semibold text-2xl mt-8">Area Calculation</h2>
+                    <table  class="mt-4 table-auto">
+                        <tbody id="table-container"> 
+
+                        </tbody>
+                        
+
+                    </table>
+                   
+                    
+                   
+                </div>
+  
+            </div>
+            <!-- calculation section second part -->
+            <div class="grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2  mt-12">
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center"  >
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/rhombus.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Rhombus</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) = 0. 5 X <span>d1</span> X <span>d2</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="d1" > <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="d2 "> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400">Calculate</button>
+                   
+                </div>
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center"   >
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/pentagon.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Pentagon</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) = 0.5 X  <span>p</span> X <span>b</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="p" > <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="b"> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400">Calculate</button>
+                   
+                </div>
+                <div class="py-6 rounded-lg bg-white shadow-lg dark:bg-neutral-700 mx-5 content-center"  >
+                  
+                    <img class="mt-4 mb-4 ml-8" src="images/ellipse.png" alt="">
+                    <h2 class="text-center font-semibold text-2xl mt-8">Ellipse</h2>
+                    <p class="mt-4 text-center text-gray-400">Area(A) = 3.1415 X <span>a</span> X <span>b</span> </p>
+                   
+                    <div class="flex mt-6">
+                        <input  class="overflow-hidden mx-5 rounded" type="text" placeholder="a" > <span class="mx-5">cm</span> 
+                    <input  class="overflow-hidden rounded" type="text" placeholder="b "> 
+                    </div>
+                    
+
+                    <button class="btn-calculate bg-blue-600 px-8 py-2 ml-20 mb-4 text-white font-medium rounded-lg mt-8 self-center hover:bg-sky-400">Calculate</button>
+                   
+                </div>
+               
+  
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <script src="js/utilities.js"></script>
+    <script src="js/shapes.js"></script>
+</body>
+</html>
+
